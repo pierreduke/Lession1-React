@@ -20,7 +20,6 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 
 class App extends Component {
   //class component
-  //class component
   constructor(props) {
     super(props);
   }
@@ -33,8 +32,8 @@ class App extends Component {
         <Header branding= 'بطرس' />
         <Contacts />
         {/* <Header branding="this is footer" /> */}
-        <HeaderTwo />
-        <HeaderThree branding="this is footer 3" />
+        {/* <HeaderTwo /> */}
+        {/* <HeaderThree branding="this is footer 3" /> */}
         
       </div>
     );

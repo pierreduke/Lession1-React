@@ -40,7 +40,7 @@ export default class Contact extends Component {
 
   render() {
     const { name, email, phone, fb, researchGate, id } = this.props.contact;
-    console.log('render', id);
+    console.log("render", id);
     return (
       <div className="p-4 mx-auto" style={{ width: "350px" }}>
         <div className="card" style={{ width: "20rem" }}>
@@ -48,8 +48,15 @@ export default class Contact extends Component {
             <h4 style={headingStyle}>
               {name + " "}
               {/*vị trí đặt nút click*/}
-              <i className="fas fa-sort-down" onClick={this.onShowClick} style={{ cursor: "pointer" }}/>
-              <i className="fas fa-times" onClick={this.onDeleteClick.bind(this, id)} style={{ cursor: "pointer", float: "right" }}
+              <i
+                className="fas fa-sort-down"
+                onClick={this.onShowClick}
+                style={{ cursor: "pointer" }}
+              />
+              <i
+                className="fas fa-times"
+                onClick={this.onDeleteClick.bind(this, id)}
+                style={{ cursor: "pointer", float: "right" }}
               />
             </h4>
           </div>
@@ -58,6 +65,7 @@ export default class Contact extends Component {
               <li className="list-group-item">Email: {email}</li>
               <li className="list-group-item">Phone: {phone}</li>
               <li className="list-group-item">Facebook: {fb}</li>
+              <li className="list-group-item">RS: {researchGate}</li>
             </ul>
           )}
         </div>

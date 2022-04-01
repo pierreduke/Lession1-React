@@ -28,15 +28,14 @@ export default class Contacts extends Component {
           name: "test3",
           email: "test3@gmail.com",
           phone: "+8432455555",
-          fb: "Joseph Le",
+          fb: "Le X",
           researchGate: "Joseph Boutros",
         },
       ],
     };
   }
   deleteContact = (id) => {
-    console.log('id', id);
-
+    console.log("id", id);
     console.log("this is father, delete contact");
     const { contacts } = this.state;
     const newContacts = contacts.filter((contact) => contact.id !== id);
@@ -50,7 +49,7 @@ export default class Contacts extends Component {
       <div>
         {contacts.map((contact) => (
           <Contact
-            contact={contact}
+            contact={contact} // name = {contact.name} ...
             key={contact.id}
             deleteClickHandler={this.deleteContact}
           />
