@@ -8,13 +8,13 @@ export const Header = class Header extends Component {
   render() {
     return (
       <div>
-        <nav className="navbar navbar-expand-sm navbar-dark bg-danger mb-3 py-3">
+        <nav className="navbar navbar-expand-sm navbar-dark bg-dark mb-3 py-3">
           <div className="container">
             <div className="navbar-brand">{this.props.branding}</div>
             <div>
               <ul className="navbar-nav mr-auto">
                 <li className="navbar-item">
-                  <a href="/" className="nav-link"> HOME </a>
+                  <a href="/" className="nav-link"> HOMEPAGE </a>
                   {/* href='/' là về trang chủ */}
                 </li>
               </ul>
