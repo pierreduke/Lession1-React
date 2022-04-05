@@ -25,10 +25,10 @@ export default class AddContact extends Component {
             this.setState({errors: {email: 'bạn chưa nhập Email!'}});
             return;
         }
-        if (phone === '') {
-            this.setState({errors: {phone: 'bạn chưa nhập Phone'}});
-            return;
-        }
+        // if (phone === '') {
+        //     this.setState({errors: {phone: 'bạn chưa nhập Phone'}});
+        //     return;
+        // }
         if (fb === '') {
             this.setState({errors: {fb: 'bạn chưa nhập FB!'}});
             return;
@@ -51,6 +51,9 @@ export default class AddContact extends Component {
             phone: "",
             errors: {}
         })
+        
+        //go back to home
+        this.props.history.push('/')
     };
 
     //state để thay đổi input thì được gọi là controller components

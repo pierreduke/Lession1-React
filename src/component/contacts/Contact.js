@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import "./Contact.css";
 import { Consumer } from "../../context";
-
+import { Link } from "react-router-dom";
 
 export default class Contact extends Component {
     constructor(props) {
@@ -26,15 +26,15 @@ export default class Contact extends Component {
     };
 
     render() {
-        const { name, email, phone, fb, researchGate, id } = this.props.contact;
+        const { name, email, phone, fb, id } = this.props.contact;
         console.log("render", id);
         return (
             <Consumer>
                 {(value) => {
                     const { dispatch, contacts } = value;
                     return (
-                        <div className="p-4 mx-auto" style={{ width: "350px" }}>
-                            <div className="card" style={{ width: "20rem" }}>
+                        <div className="p-4 mx-auto" style={{ width: "300px" }}>
+                            <div className="card" style={{ width: "25rem" }}>
                                 <div className="text-center card-header">
                                     <h4 style={headingStyle}>
                                         {name + " "}
@@ -44,11 +44,14 @@ export default class Contact extends Component {
                                             onClick={this.onShowClick}
                                             style={{ cursor: "pointer" }}
                                         />
+                                        <Link to={`./contact/${id}`}><i className="fa fa-user" style={{ cursor: "pointer", float: "left" }}></i></Link>
+
                                         <i
                                             className="fas fa-times"
                                             onClick={this.onDeleteClick.bind(this, id, dispatch)}
                                             style={{ cursor: "pointer", float: "right" }}
                                         />
+
                                     </h4>
                                 </div>
                                 {this.state.onShow && ( //thêm vào để kết hợp sự kiện click show/hide

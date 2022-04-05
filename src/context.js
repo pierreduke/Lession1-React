@@ -31,21 +31,21 @@ export class Provider extends Component {
         //state này sẽ dùng được cho tất cả các components
         contacts: [
             {
-                id: 1,
+                id: '1',
                 name: "Pierre Duke",
                 email: "phandoanduc05@gmail.com",
                 phone: "0325828585",
                 fb: "Phan Doãn Đức",
             },
             {
-                id: 2,
-                name: "Jacoub Hai",
-                email: "jacoubhai@gmail.com",
+                id: '2',
+                name: "Jacoub",
+                email: "jacoub@gmail.com",
                 phone: "01225555443",
                 fb: "يعقوب",
             },
             {
-                id: 3,
+                id: '3',
                 name: "CelebA",
                 email: "test3@gmail.com",
                 phone: "+8432455555",
